@@ -130,17 +130,29 @@ namespace FacturacionSB
 
         }
 
-      
-        private void AgregarFoto_Click(object sender, EventArgs e)
+  
+
+        private void listaProductosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void listaProductosDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             var producto = (Producto)listaProductosBindingSource.Current;
 
-            var archivo = openFileDialog2.FileName;
-            openFileDialog2.ShowDialog();
-          
-            if (producto.ImagProd != null)
+            if (producto != null)
             {
-                
+                openFileDialog2.FileName = "";
+                openFileDialog2.ShowDialog();
+
+                var archivo = openFileDialog2.FileName;
+
                 if (archivo != "")
                 {
                     var fileInfo = new FileInfo(archivo);
@@ -149,15 +161,16 @@ namespace FacturacionSB
                     imagProdPictureBox.Image = Image.FromStream(fileStream);
                 }
             }
+             
             else
             {
                 MessageBox.Show("Cree un Producto ante de Agregar una imagen");
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            imagProdPictureBox = null;
+            imagProdPictureBox.Image = null;
         }
     }
 }

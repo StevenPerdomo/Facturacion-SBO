@@ -38,7 +38,6 @@
             System.Windows.Forms.Label idLabel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductos));
             this.listaProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.ToolstripButtonAgregar = new System.Windows.Forms.ToolStripButton();
             this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.ToolstripButtonEliminar = new System.Windows.Forms.ToolStripButton();
@@ -50,28 +49,28 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolstripButtonAgregar = new System.Windows.Forms.ToolStripButton();
             this.ToolstripButtonSalvar = new System.Windows.Forms.ToolStripButton();
             this.ToolstripButtonCancelar = new System.Windows.Forms.ToolStripButton();
-            this.listaProductosDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.descripcionTextBox = new System.Windows.Forms.TextBox();
             this.existenciaTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
             this.LblProductos = new System.Windows.Forms.Label();
-            this.imagProdPictureBox = new System.Windows.Forms.PictureBox();
-            this.AgregarFoto = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.listaCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idComboBox = new System.Windows.Forms.ComboBox();
+            this.listaProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.imagProdPictureBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             activoLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
@@ -82,9 +81,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingNavigator)).BeginInit();
             this.listaProductosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagProdPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -181,17 +180,6 @@
             this.listaProductosBindingNavigator.TabIndex = 9;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
             // 
-            // ToolstripButtonAgregar
-            // 
-            this.ToolstripButtonAgregar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.ToolstripButtonAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ToolstripButtonAgregar.Image = ((System.Drawing.Image)(resources.GetObject("ToolstripButtonAgregar.Image")));
-            this.ToolstripButtonAgregar.Name = "ToolstripButtonAgregar";
-            this.ToolstripButtonAgregar.RightToLeftAutoMirrorImage = true;
-            this.ToolstripButtonAgregar.Size = new System.Drawing.Size(23, 22);
-            this.ToolstripButtonAgregar.Text = "Add new";
-            this.ToolstripButtonAgregar.Click += new System.EventHandler(this.ToolstripButtonAgregar_Click);
-            // 
             // listaProductosBindingSource
             // 
             this.listaProductosBindingSource.DataSource = typeof(BLFacturacionSB.Producto);
@@ -199,8 +187,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // ToolstripButtonEliminar
@@ -274,6 +262,17 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // ToolstripButtonAgregar
+            // 
+            this.ToolstripButtonAgregar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.ToolstripButtonAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolstripButtonAgregar.Image = ((System.Drawing.Image)(resources.GetObject("ToolstripButtonAgregar.Image")));
+            this.ToolstripButtonAgregar.Name = "ToolstripButtonAgregar";
+            this.ToolstripButtonAgregar.RightToLeftAutoMirrorImage = true;
+            this.ToolstripButtonAgregar.Size = new System.Drawing.Size(23, 22);
+            this.ToolstripButtonAgregar.Text = "Add new";
+            this.ToolstripButtonAgregar.Click += new System.EventHandler(this.ToolstripButtonAgregar_Click);
+            // 
             // ToolstripButtonSalvar
             // 
             this.ToolstripButtonSalvar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -294,66 +293,6 @@
             this.ToolstripButtonCancelar.Text = "Cancelar";
             this.ToolstripButtonCancelar.Visible = false;
             this.ToolstripButtonCancelar.Click += new System.EventHandler(this.ToolstripButtonCancelar_Click);
-            // 
-            // listaProductosDataGridView
-            // 
-            this.listaProductosDataGridView.AutoGenerateColumns = false;
-            this.listaProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewCheckBoxColumn1});
-            this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
-            this.listaProductosDataGridView.Location = new System.Drawing.Point(339, 72);
-            this.listaProductosDataGridView.Name = "listaProductosDataGridView";
-            this.listaProductosDataGridView.Size = new System.Drawing.Size(744, 454);
-            this.listaProductosDataGridView.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Precio";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Existencia";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Existencia";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Categoria";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Categoria";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ImagProd";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Imagen";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
             // activoCheckBox
             // 
@@ -409,40 +348,8 @@
             this.LblProductos.TabIndex = 15;
             this.LblProductos.Text = "Ficha de Producto";
             // 
-            // imagProdPictureBox
-            // 
-            this.imagProdPictureBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.imagProdPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaProductosBindingSource, "ImagProd", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.imagProdPictureBox.Location = new System.Drawing.Point(106, 284);
-            this.imagProdPictureBox.Name = "imagProdPictureBox";
-            this.imagProdPictureBox.Size = new System.Drawing.Size(193, 174);
-            this.imagProdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagProdPictureBox.TabIndex = 16;
-            this.imagProdPictureBox.TabStop = false;
-            // 
-            // AgregarFoto
-            // 
-            this.AgregarFoto.Location = new System.Drawing.Point(106, 464);
-            this.AgregarFoto.Name = "AgregarFoto";
-            this.AgregarFoto.Size = new System.Drawing.Size(116, 23);
-            this.AgregarFoto.TabIndex = 7;
-            this.AgregarFoto.Text = "Agregar Foto";
-            this.AgregarFoto.UseVisualStyleBackColor = true;
-            this.AgregarFoto.Click += new System.EventHandler(this.AgregarFoto_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(106, 493);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Remover Foto";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // openFileDialog2
             // 
-            this.openFileDialog2.FileName = "openFileDialog2";
             this.openFileDialog2.Filter = "jpg,png |*.jpg;*.png";
             // 
             // listaCategoriasBindingSource
@@ -462,17 +369,102 @@
             this.idComboBox.TabIndex = 19;
             this.idComboBox.ValueMember = "Id";
             // 
+            // listaProductosDataGridView
+            // 
+            this.listaProductosDataGridView.AutoGenerateColumns = false;
+            this.listaProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewCheckBoxColumn1});
+            this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
+            this.listaProductosDataGridView.Location = new System.Drawing.Point(326, 129);
+            this.listaProductosDataGridView.Name = "listaProductosDataGridView";
+            this.listaProductosDataGridView.Size = new System.Drawing.Size(649, 265);
+            this.listaProductosDataGridView.TabIndex = 19;
+            // 
+            // imagProdPictureBox
+            // 
+            this.imagProdPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.imagProdPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaProductosBindingSource, "ImagProd", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.imagProdPictureBox.Location = new System.Drawing.Point(92, 286);
+            this.imagProdPictureBox.Name = "imagProdPictureBox";
+            this.imagProdPictureBox.Size = new System.Drawing.Size(171, 120);
+            this.imagProdPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagProdPictureBox.TabIndex = 20;
+            this.imagProdPictureBox.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(79, 426);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 34);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Agregar Foto";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(186, 426);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 34);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Remover Foto";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Precio";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Categoria";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Existencia";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Existencia";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1171, 771);
+            this.ClientSize = new System.Drawing.Size(1171, 749);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.imagProdPictureBox);
+            this.Controls.Add(this.listaProductosDataGridView);
             this.Controls.Add(idLabel1);
             this.Controls.Add(this.idComboBox);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.AgregarFoto);
             this.Controls.Add(imagProdLabel);
-            this.Controls.Add(this.imagProdPictureBox);
             this.Controls.Add(this.LblProductos);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
@@ -484,7 +476,6 @@
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(precioLabel);
             this.Controls.Add(this.precioTextBox);
-            this.Controls.Add(this.listaProductosDataGridView);
             this.Controls.Add(this.listaProductosBindingNavigator);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProductos";
@@ -495,9 +486,9 @@
             this.listaProductosBindingNavigator.ResumeLayout(false);
             this.listaProductosBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagProdPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,25 +511,24 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton ToolstripButtonSalvar;
         private System.Windows.Forms.ToolStripButton ToolstripButtonCancelar;
-        private System.Windows.Forms.DataGridView listaProductosDataGridView;
         private System.Windows.Forms.CheckBox activoCheckBox;
         private System.Windows.Forms.TextBox descripcionTextBox;
         private System.Windows.Forms.TextBox existenciaTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox precioTextBox;
         private System.Windows.Forms.Label LblProductos;
-        private System.Windows.Forms.PictureBox imagProdPictureBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.Button AgregarFoto;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.BindingSource listaCategoriasBindingSource;
         private System.Windows.Forms.ComboBox idComboBox;
+        private System.Windows.Forms.DataGridView listaProductosDataGridView;
+        private System.Windows.Forms.PictureBox imagProdPictureBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }
