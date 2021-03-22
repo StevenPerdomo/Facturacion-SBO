@@ -1,0 +1,5 @@
+﻿1>------ Build started: Project: BLFacturacionSB, Configuration: Debug Any CPU ------
+1>  BLFacturacionSB -> C:\FacturacionSB\BLSeguridad\bin\Debug\BLFacturacionSB.dll
+2>------ Build started: Project: FacturacionSB, Configuration: Debug Any CPU ------
+2>  FacturacionSB -> C:\FacturacionSB\FacturacionSB\bin\Debug\FacturacionSB.exe
+========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
