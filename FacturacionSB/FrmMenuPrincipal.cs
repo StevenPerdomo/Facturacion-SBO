@@ -126,6 +126,13 @@ namespace FacturacionSB
         {
             Application.Exit();
         }
+
+        private void reporteDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmReporteClientes = new FrmReporteProductos();
+            frmReporteClientes.MdiParent = this;
+            frmReporteClientes.Show();
+        }
     }
     }
 
