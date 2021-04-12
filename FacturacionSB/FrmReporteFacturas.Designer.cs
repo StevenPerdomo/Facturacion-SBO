@@ -1,6 +1,6 @@
 ﻿namespace FacturacionSB
 {
-    partial class FrmReporteProductos
+    partial class FrmReporteFacturas
     {
         /// <summary>
         /// Required designer variable.
@@ -40,19 +40,18 @@
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ShowGroupTreeButton = false;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(891, 484);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(798, 466);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // FrmReporteProductos
+            // FrmReporteFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 484);
+            this.ClientSize = new System.Drawing.Size(798, 466);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "FrmReporteProductos";
-            this.Text = "Reporte de Clientes";
+            this.Name = "FrmReporteFacturas";
+            this.Text = "Reporte de Facturas";
             this.ResumeLayout(false);
 
         }

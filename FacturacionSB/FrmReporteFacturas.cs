@@ -11,17 +11,17 @@ using System.Windows.Forms;
 
 namespace FacturacionSB
 {
-    public partial class FrmReporteProductos : Form
+    public partial class FrmReporteFacturas : Form
     {
-        public FrmReporteProductos()
+        public FrmReporteFacturas()
         {
             InitializeComponent();
-             
-            var _productosBL = new ProductosBL();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = _productosBL.ObtenerProductos();
 
-            var reporte = new ReporteProductos();
+            var _facturaBL = new FacturaBL();
+            var bindingSource = new BindingSource();
+            bindingSource.DataSource = _facturaBL.ObtenerFacturas();
+
+            var reporte = new ReporteFacturas();
             reporte.SetDataSource(bindingSource);
 
             crystalReportViewer1.ReportSource = reporte;
@@ -30,9 +30,6 @@ namespace FacturacionSB
 
         }
 
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

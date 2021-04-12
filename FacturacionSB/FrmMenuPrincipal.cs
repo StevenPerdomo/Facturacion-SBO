@@ -129,9 +129,27 @@ namespace FacturacionSB
 
         private void reporteDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmReporteClientes = new FrmReporteProductos();
-            frmReporteClientes.MdiParent = this;
-            frmReporteClientes.Show();
+            var frmReporteProductos = new FrmReporteProductos();
+            frmReporteProductos.MdiParent = this;
+            frmReporteProductos.Show();
+        }
+
+        private void rentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facturacionMensualToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reporteDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmReporteFacturas = new FrmReporteFacturas();
+            frmReporteFacturas.MdiParent = this;
+            frmReporteFacturas.Show();
+
         }
     }
     }
