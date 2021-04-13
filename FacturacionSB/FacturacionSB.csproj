@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SubReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -139,6 +145,12 @@
     <Compile Include="FrmReporteProductos.Designer.cs">
       <DependentUpon>FrmReporteProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSubReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSubReporte.Designer.cs">
+      <DependentUpon>FrmSubReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +177,10 @@
       <DependentUpon>ReporteProductos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="SubReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubReporte.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCAI.resx">
       <DependentUpon>FrmCAI.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteProductos.resx">
       <DependentUpon>FrmReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSubReporte.resx">
+      <DependentUpon>FrmSubReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

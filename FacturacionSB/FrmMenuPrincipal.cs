@@ -151,6 +151,13 @@ namespace FacturacionSB
             frmReporteFacturas.Show();
 
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmSubReporte = new FrmSubReporte();
+            frmSubReporte.MdiParent = this;
+            frmSubReporte.Show();
+        }
     }
     }
 
