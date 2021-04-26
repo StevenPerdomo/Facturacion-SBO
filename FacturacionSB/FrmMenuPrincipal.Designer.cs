@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cotizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturacionMensualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,23 +74,15 @@
             // transaccionesToolStripMenuItem
             // 
             this.transaccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cotizacionesToolStripMenuItem,
             this.facturacionToolStripMenuItem});
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
             this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.transaccionesToolStripMenuItem.Text = "Transacciones";
             // 
-            // cotizacionesToolStripMenuItem
-            // 
-            this.cotizacionesToolStripMenuItem.Name = "cotizacionesToolStripMenuItem";
-            this.cotizacionesToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.cotizacionesToolStripMenuItem.Text = "Cotizaciones";
-            this.cotizacionesToolStripMenuItem.Click += new System.EventHandler(this.cotizacionesToolStripMenuItem_Click);
-            // 
             // facturacionToolStripMenuItem
             // 
             this.facturacionToolStripMenuItem.Name = "facturacionToolStripMenuItem";
-            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.facturacionToolStripMenuItem.Text = "Facturacion";
             this.facturacionToolStripMenuItem.Click += new System.EventHandler(this.facturacionToolStripMenuItem_Click);
             // 
@@ -111,7 +102,9 @@
             this.facturacionMensualToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.facturacionMensualToolStripMenuItem1,
             this.facturasAlCreditoToolStripMenuItem1});
+            this.facturacionMensualToolStripMenuItem.Enabled = false;
             this.facturacionMensualToolStripMenuItem.Name = "facturacionMensualToolStripMenuItem";
+            this.facturacionMensualToolStripMenuItem.ShowShortcutKeys = false;
             this.facturacionMensualToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.facturacionMensualToolStripMenuItem.Text = "Facturacion";
             this.facturacionMensualToolStripMenuItem.Click += new System.EventHandler(this.facturacionMensualToolStripMenuItem_Click);
@@ -134,6 +127,7 @@
             this.iSVToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.iSVToolStripMenuItem1,
             this.rentaToolStripMenuItem});
+            this.iSVToolStripMenuItem.Enabled = false;
             this.iSVToolStripMenuItem.Name = "iSVToolStripMenuItem";
             this.iSVToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.iSVToolStripMenuItem.Text = "Rentas";
@@ -142,13 +136,13 @@
             // iSVToolStripMenuItem1
             // 
             this.iSVToolStripMenuItem1.Name = "iSVToolStripMenuItem1";
-            this.iSVToolStripMenuItem1.Size = new System.Drawing.Size(104, 22);
+            this.iSVToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.iSVToolStripMenuItem1.Text = "ISV ";
             // 
             // rentaToolStripMenuItem
             // 
             this.rentaToolStripMenuItem.Name = "rentaToolStripMenuItem";
-            this.rentaToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.rentaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rentaToolStripMenuItem.Text = "Renta";
             this.rentaToolStripMenuItem.Click += new System.EventHandler(this.rentaToolStripMenuItem_Click);
             // 
@@ -239,6 +233,7 @@
             this.infoEmpresaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rangoDeFacturacionToolStripMenuItem,
             this.razonSocialToolStripMenuItem});
+            this.infoEmpresaToolStripMenuItem.Enabled = false;
             this.infoEmpresaToolStripMenuItem.Name = "infoEmpresaToolStripMenuItem";
             this.infoEmpresaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.infoEmpresaToolStripMenuItem.Text = "Info Empresa";
@@ -270,14 +265,14 @@
             // loginToolStripMenuItem1
             // 
             this.loginToolStripMenuItem1.Name = "loginToolStripMenuItem1";
-            this.loginToolStripMenuItem1.Size = new System.Drawing.Size(104, 22);
+            this.loginToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.loginToolStripMenuItem1.Text = "Login";
             this.loginToolStripMenuItem1.Click += new System.EventHandler(this.loginToolStripMenuItem1_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -306,7 +301,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cotizacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturacionMensualToolStripMenuItem;
