@@ -32,10 +32,12 @@ namespace FacturacionSB
             button1.Text = "Verificando...";
             Application.DoEvents();
 
-            var resultado = _seguridad.Autorizar(usuario, contrasena);
+            var usuarioDB = _seguridad.Autorizar(usuario, contrasena);
 
-            if(resultado == true)
+            if(usuarioDB != null)
             {
+                Utils.NombreUsuario = usuarioDB.Nombre;
+
                 this.Close();
             }
             else
@@ -57,6 +59,29 @@ namespace FacturacionSB
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if(textBox1.Text != "")
+                {
+                    textBox2.Focus();
+                }
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (textBox2.Text != "")
+                {
+                    button1_Click(null, null);
+                }
+            }
 
         }
     }

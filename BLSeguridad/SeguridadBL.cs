@@ -12,7 +12,7 @@ namespace BLFacturacionSB
                 _contexto = new Contexto();
             }
 
-            public bool Autorizar(string usuario, string password)
+            public Usuario Autorizar(string usuario, string password)
              {
 
             var usuarios = _contexto.Usuarios.ToList();
@@ -21,10 +21,10 @@ namespace BLFacturacionSB
             {
                if (usuario == UsuariosDB.Nombre && password == UsuariosDB.Password)
                 {
-                    return true;
+                    return UsuariosDB;
                    }
                 }
-                    return false;
+                    return null;
                 }
                  
             }

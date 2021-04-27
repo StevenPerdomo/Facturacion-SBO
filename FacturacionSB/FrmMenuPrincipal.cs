@@ -19,7 +19,9 @@ namespace FacturacionSB
         private void Login()
         {
              var frmLogin = new FrmLogin();
-             frmLogin.ShowDialog(); 
+             frmLogin.ShowDialog();
+
+            toolStripStatusLabel1.Text = "Usuario:" + Utils.NombreUsuario;
 
         }
 
