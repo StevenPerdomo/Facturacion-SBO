@@ -178,6 +178,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubReporte.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SubReporte.cs</LastGenOutput>
@@ -304,6 +307,27 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura_electronica-2-850x500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electricidad en el Espacio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1203173700-1024x1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34190850-vector-resumen-de-fondo-oscuro-con-luz-de-neón-vector-de-fondo-para-la-web-aplicaciones-negocio-resumen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

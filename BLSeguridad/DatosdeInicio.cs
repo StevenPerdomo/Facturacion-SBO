@@ -15,21 +15,11 @@ namespace BLFacturacionSB
             var usuarioAdmin = new Usuario();
             usuarioAdmin.Nombre = "admin";
             usuarioAdmin.Password = "123";
-            usuarioAdmin.Rol = "Super Usuario";
-
-            var usuarioAdmin1 = new Usuario();
-            usuarioAdmin1.Nombre = "Wilmer";
-            usuarioAdmin1.Password = "321";
-            usuarioAdmin1.Rol = "Mini Usuario";
-
-            var usuarioAdmin2 = new Usuario();
-            usuarioAdmin2.Nombre = "Saul";
-            usuarioAdmin2.Password = "999";
-            usuarioAdmin2.Rol = "Medio Usuario";
+            usuarioAdmin.Rol = "Administradores";
+          
 
             contexto.Usuarios.Add(usuarioAdmin);
-            contexto.Usuarios.Add(usuarioAdmin1);
-            contexto.Usuarios.Add(usuarioAdmin2);
+            
 
 
             var categoria1 = new Categoria();
